@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Style the form container */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 80px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style form elements */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Style the declaration checkbox */
+        #declaration-label {
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form action="registration_process.php" method="POST">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password">Re-enter Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+
+            <label for="languages">Languages Known:</label>
+            <select id="languages" name="languages[]" multiple>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Telugu">Telugu</option>
+            </select>
+
+            <input type="checkbox" id="declaration" name="declaration" required>
+            <label id="declaration-label" for="declaration">I declare that all the given details are true.</label>
+            <ul> 
+                <a href="https://ethnus.com/" target="_blank"> ethnus</a>
+            </ul>
+
+            <br><br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
